@@ -19,6 +19,11 @@ router.get('/verify', (req, res) => {
   } else {
     console.log('Not Auth');
   }
-})
+});
+
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
 
 module.exports = router;
